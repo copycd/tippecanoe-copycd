@@ -3,6 +3,10 @@
 => make
 
 
+- 아래처럼 한번에 필요한 파일들을 설치함.
+sudo apt-get install build-essential libsqlite3-dev zlib1g-dev
+
+
 - make가 없는 에러.
 Command 'make' not found, but can be installed with:
 
@@ -12,6 +16,8 @@ sudo apt install make-guile  # version 4.2.1-1.2
 =>sudo apt install make
 
 
+-----------------------------------------------------------------------------------------
+-- 위의 방법이 없는 줄 알고, 아래처럼 했음. 
 
 - g++ 없다고 에러나면
 /bin/bash: g++: command not found
@@ -37,3 +43,6 @@ geojson.cpp:18:10: fatal error: sqlite3.h: No such file or directory
 - zlib 관련 컴파일 에러
 tile.cpp:18:10: fatal error: zlib.h: No such file or directory
 => sudo apt install zlib1g-dev
+
+
+- 여기까지 했더니 오류없이 잘 컴파일됨.
