@@ -1,0 +1,39 @@
+- ubuntu 에서 컴파일함. ( linux만 지원함 )
+- 해당 소스 (makefile) 있는곳에서 
+=> make
+
+
+- make가 없는 에러.
+Command 'make' not found, but can be installed with:
+
+sudo apt install make        # version 4.2.1-1.2, or
+sudo apt install make-guile  # version 4.2.1-1.2
+설치해줌
+=>sudo apt install make
+
+
+
+- g++ 없다고 에러나면
+/bin/bash: g++: command not found
+=> sudo apt-get install g++
+
+- 만일 잘안되면, 아래와 같이 다시 해야함.
+sudo killall apt aptget
+apt: no process found
+aptget: no process found
+sudo rm /var/lib/apt/lists/lock
+sudo rm /var/cache/apt/archives/lock
+sudo rm /var/lib/dpkg/lock*
+sudo dpkg --configure -a
+sudo apt update
+sudo apt-get install g++
+
+
+- sqlite관련 컴파일 에러
+geojson.cpp:18:10: fatal error: sqlite3.h: No such file or directory
+=> sudo apt-get install libsqlite3-dev
+
+
+- zlib 관련 컴파일 에러
+tile.cpp:18:10: fatal error: zlib.h: No such file or directory
+=> sudo apt install zlib1g-dev
