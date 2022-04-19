@@ -1,19 +1,16 @@
 - ubuntu 에서 컴파일함. ( linux만 지원함 )
 - 해당 소스 (makefile) 있는곳에서 
-=> make
-
+    => make
 
 - 아래처럼 한번에 필요한 파일들을 설치함.
-sudo apt-get install build-essential libsqlite3-dev zlib1g-dev
+    sudo apt-get install build-essential libsqlite3-dev zlib1g-dev
 
-
-- make가 없는 에러.
-Command 'make' not found, but can be installed with:
-
-sudo apt install make        # version 4.2.1-1.2, or
-sudo apt install make-guile  # version 4.2.1-1.2
-설치해줌
-=>sudo apt install make
+- make가 없다는 에러가 나면
+    Command 'make' not found, but can be installed with:
+    sudo apt install make        # version 4.2.1-1.2, or
+    sudo apt install make-guile  # version 4.2.1-1.2
+    아래와 같이 설치해줌
+    =>sudo apt install make
 
 
 -----------------------------------------------------------------------------------------
@@ -46,3 +43,10 @@ tile.cpp:18:10: fatal error: zlib.h: No such file or directory
 
 
 - 여기까지 했더니 오류없이 잘 컴파일됨.
+---------------------------------------------------------------------------------------------
+
+
+****  cygWin에서 컴파일 하기
+여기나온데로 하면 됨.  근데, 위처럼 된다면 굳이 cygwin으로 컴파일 할 필요없음. 
+https://github.com/GISupportICRC/ArcGIS2Mapbox
+- setup-x86_64.exe -q -P zlib-devel,libsqlite3-devel,gcc-g++,make,python,git,gdal,python-gdal

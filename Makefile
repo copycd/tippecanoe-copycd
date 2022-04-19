@@ -7,7 +7,11 @@ SHELL = /bin/bash
 CC := $(CC)
 CXX := $(CXX)
 CFLAGS := $(CFLAGS)
+# linux에서 컴파일할때 원본 설정.
 CXXFLAGS := $(CXXFLAGS) -std=c++11
+# cygwin에서 컴파일할때 변경 설정.
+#CXXFLAGS := $(CXXFLAGS) -std=c++11 -U__STRICT_ANSI__
+
 LDFLAGS := $(LDFLAGS)
 WARNING_FLAGS := -Wall -Wshadow -Wsign-compare -Wextra -Wunreachable-code -Wuninitialized -Wshadow
 RELEASE_FLAGS := -O3 -DNDEBUG
